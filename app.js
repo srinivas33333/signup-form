@@ -44,7 +44,7 @@ const url = "https://us5.api.mailchimp.com/3.0/lists/dfea8b2f7d" ;
 
 const Options = {
     method : "POST",
-    auth : "sri0:38ed977ef2a17deaf1b322d51f0ef0f4-us5"
+    auth : "sri0:ef80619c06435c956feb077430015af3-us5"
 };
 
    const request=  https.request(url,Options,function(response){
@@ -60,7 +60,7 @@ const Options = {
      }) ;
     } );
 
-    request.write(jsonData);
+    // request.write(jsonData);
     request.end() ;
 }) ;
 
@@ -68,7 +68,7 @@ app.post('/failure',function(req,res){
      res.redirect("/") ;
 });
 
-app.listen(process.env.PORT || 3000,function(){
+app.listen(3000 || process.env.PORT,function(){
     console.log('server runs');
 }) ;
 
